@@ -1,1 +1,1 @@
-# SquareGame
+# Square Game
