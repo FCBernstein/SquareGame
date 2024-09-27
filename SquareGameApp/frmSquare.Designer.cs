@@ -74,6 +74,15 @@
             lblLine24 = new Label();
             lblDot16 = new Label();
             lblLine10 = new Label();
+            lblBoxFill1 = new Label();
+            lblBoxFill2 = new Label();
+            lblBoxFill3 = new Label();
+            lblBoxFill4 = new Label();
+            lblBoxFill5 = new Label();
+            lblBoxFill6 = new Label();
+            lblBoxFill7 = new Label();
+            lblBoxFill8 = new Label();
+            lblBoxFill9 = new Label();
             tblMain.SuspendLayout();
             tblStartStatus.SuspendLayout();
             tblGrid.SuspendLayout();
@@ -186,6 +195,15 @@
             tblGrid.Controls.Add(lblLine24, 6, 7);
             tblGrid.Controls.Add(lblDot16, 7, 7);
             tblGrid.Controls.Add(lblLine10, 6, 3);
+            tblGrid.Controls.Add(lblBoxFill1, 2, 2);
+            tblGrid.Controls.Add(lblBoxFill2, 4, 2);
+            tblGrid.Controls.Add(lblBoxFill3, 6, 2);
+            tblGrid.Controls.Add(lblBoxFill4, 2, 4);
+            tblGrid.Controls.Add(lblBoxFill5, 4, 4);
+            tblGrid.Controls.Add(lblBoxFill6, 6, 4);
+            tblGrid.Controls.Add(lblBoxFill7, 2, 6);
+            tblGrid.Controls.Add(lblBoxFill8, 4, 6);
+            tblGrid.Controls.Add(lblBoxFill9, 6, 6);
             tblGrid.Dock = DockStyle.Fill;
             tblGrid.Location = new Point(0, 78);
             tblGrid.Margin = new Padding(0);
@@ -607,6 +625,96 @@
             lblLine10.Size = new Size(116, 8);
             lblLine10.TabIndex = 16;
             // 
+            // lblBoxFill1
+            // 
+            lblBoxFill1.AutoSize = true;
+            lblBoxFill1.Dock = DockStyle.Fill;
+            lblBoxFill1.Location = new Point(149, 146);
+            lblBoxFill1.Name = "lblBoxFill1";
+            lblBoxFill1.Size = new Size(110, 116);
+            lblBoxFill1.TabIndex = 39;
+            lblBoxFill1.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill2
+            // 
+            lblBoxFill2.AutoSize = true;
+            lblBoxFill2.Dock = DockStyle.Fill;
+            lblBoxFill2.Location = new Point(295, 146);
+            lblBoxFill2.Name = "lblBoxFill2";
+            lblBoxFill2.Size = new Size(110, 116);
+            lblBoxFill2.TabIndex = 40;
+            lblBoxFill2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill3
+            // 
+            lblBoxFill3.AutoSize = true;
+            lblBoxFill3.Dock = DockStyle.Fill;
+            lblBoxFill3.Location = new Point(441, 146);
+            lblBoxFill3.Name = "lblBoxFill3";
+            lblBoxFill3.Size = new Size(110, 116);
+            lblBoxFill3.TabIndex = 41;
+            lblBoxFill3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill4
+            // 
+            lblBoxFill4.AutoSize = true;
+            lblBoxFill4.Dock = DockStyle.Fill;
+            lblBoxFill4.Location = new Point(149, 292);
+            lblBoxFill4.Name = "lblBoxFill4";
+            lblBoxFill4.Size = new Size(110, 116);
+            lblBoxFill4.TabIndex = 42;
+            lblBoxFill4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill5
+            // 
+            lblBoxFill5.AutoSize = true;
+            lblBoxFill5.Dock = DockStyle.Fill;
+            lblBoxFill5.Location = new Point(295, 292);
+            lblBoxFill5.Name = "lblBoxFill5";
+            lblBoxFill5.Size = new Size(110, 116);
+            lblBoxFill5.TabIndex = 43;
+            lblBoxFill5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill6
+            // 
+            lblBoxFill6.AutoSize = true;
+            lblBoxFill6.Dock = DockStyle.Fill;
+            lblBoxFill6.Location = new Point(441, 292);
+            lblBoxFill6.Name = "lblBoxFill6";
+            lblBoxFill6.Size = new Size(110, 116);
+            lblBoxFill6.TabIndex = 44;
+            lblBoxFill6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill7
+            // 
+            lblBoxFill7.AutoSize = true;
+            lblBoxFill7.Dock = DockStyle.Fill;
+            lblBoxFill7.Location = new Point(149, 438);
+            lblBoxFill7.Name = "lblBoxFill7";
+            lblBoxFill7.Size = new Size(110, 116);
+            lblBoxFill7.TabIndex = 45;
+            lblBoxFill7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill8
+            // 
+            lblBoxFill8.AutoSize = true;
+            lblBoxFill8.Dock = DockStyle.Fill;
+            lblBoxFill8.Location = new Point(295, 438);
+            lblBoxFill8.Name = "lblBoxFill8";
+            lblBoxFill8.Size = new Size(110, 116);
+            lblBoxFill8.TabIndex = 46;
+            lblBoxFill8.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblBoxFill9
+            // 
+            lblBoxFill9.AutoSize = true;
+            lblBoxFill9.Dock = DockStyle.Fill;
+            lblBoxFill9.Location = new Point(441, 438);
+            lblBoxFill9.Name = "lblBoxFill9";
+            lblBoxFill9.Size = new Size(110, 116);
+            lblBoxFill9.TabIndex = 47;
+            lblBoxFill9.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmSquare
             // 
             AutoScaleDimensions = new SizeF(16F, 26F);
@@ -673,5 +781,14 @@
         private Label lblLine24;
         private Label lblDot16;
         private Label lblLine10;
+        private Label lblBoxFill1;
+        private Label lblBoxFill2;
+        private Label lblBoxFill3;
+        private Label lblBoxFill4;
+        private Label lblBoxFill5;
+        private Label lblBoxFill6;
+        private Label lblBoxFill7;
+        private Label lblBoxFill8;
+        private Label lblBoxFill9;
     }
 }
