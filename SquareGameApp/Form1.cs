@@ -1,8 +1,8 @@
 namespace SquareGameApp
 {
-    public partial class Form1 : Form
+    public partial class frmSquare : Form
     {
-        public Form1()
+        public frmSquare()
         {
             InitializeComponent();
         }
