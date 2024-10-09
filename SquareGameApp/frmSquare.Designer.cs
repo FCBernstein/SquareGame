@@ -220,6 +220,7 @@
             tblGrid.RowStyles.Add(new RowStyle(SizeType.Percent, 20.0000019F));
             tblGrid.Size = new Size(701, 704);
             tblGrid.TabIndex = 0;
+            tblGrid.Paint += tblGrid_Paint;
             // 
             // lblDot1
             // 
@@ -241,6 +242,8 @@
             lblLine1.Name = "lblLine1";
             lblLine1.Size = new Size(116, 8);
             lblLine1.TabIndex = 1;
+            lblLine1.Tag = "row";
+            lblLine1.Click += row1_Click;
             // 
             // lblDot2
             // 
@@ -262,6 +265,7 @@
             lblLine2.Name = "lblLine2";
             lblLine2.Size = new Size(116, 8);
             lblLine2.TabIndex = 3;
+            lblLine2.Tag = "row";
             // 
             // lblDot3
             // 
@@ -294,6 +298,7 @@
             lblLine3.Name = "lblLine3";
             lblLine3.Size = new Size(116, 8);
             lblLine3.TabIndex = 5;
+            lblLine3.Tag = "row";
             // 
             // lblLine4
             // 
@@ -303,6 +308,7 @@
             lblLine4.Name = "lblLine4";
             lblLine4.Size = new Size(8, 116);
             lblLine4.TabIndex = 7;
+            lblLine4.Tag = "column";
             // 
             // lblLine5
             // 
@@ -312,6 +318,7 @@
             lblLine5.Name = "lblLine5";
             lblLine5.Size = new Size(8, 116);
             lblLine5.TabIndex = 8;
+            lblLine5.Tag = "column";
             // 
             // lblLine6
             // 
@@ -321,6 +328,7 @@
             lblLine6.Name = "lblLine6";
             lblLine6.Size = new Size(8, 116);
             lblLine6.TabIndex = 9;
+            lblLine6.Tag = "column";
             // 
             // lblLine7
             // 
@@ -330,6 +338,7 @@
             lblLine7.Name = "lblLine7";
             lblLine7.Size = new Size(8, 116);
             lblLine7.TabIndex = 10;
+            lblLine7.Tag = "column";
             // 
             // lblDot5
             // 
@@ -351,6 +360,7 @@
             lblLine8.Name = "lblLine8";
             lblLine8.Size = new Size(116, 8);
             lblLine8.TabIndex = 12;
+            lblLine8.Tag = "row";
             // 
             // lblDot6
             // 
@@ -372,6 +382,7 @@
             lblLine9.Name = "lblLine9";
             lblLine9.Size = new Size(116, 8);
             lblLine9.TabIndex = 14;
+            lblLine9.Tag = "row";
             // 
             // lblDot7
             // 
@@ -403,6 +414,7 @@
             lblLine11.Name = "lblLine11";
             lblLine11.Size = new Size(8, 116);
             lblLine11.TabIndex = 18;
+            lblLine11.Tag = "column";
             // 
             // lblLine12
             // 
@@ -412,6 +424,7 @@
             lblLine12.Name = "lblLine12";
             lblLine12.Size = new Size(8, 116);
             lblLine12.TabIndex = 19;
+            lblLine12.Tag = "column";
             // 
             // lblLine13
             // 
@@ -421,6 +434,7 @@
             lblLine13.Name = "lblLine13";
             lblLine13.Size = new Size(8, 116);
             lblLine13.TabIndex = 19;
+            lblLine13.Tag = "column";
             // 
             // lblLine14
             // 
@@ -430,6 +444,7 @@
             lblLine14.Name = "lblLine14";
             lblLine14.Size = new Size(8, 116);
             lblLine14.TabIndex = 20;
+            lblLine14.Tag = "column";
             // 
             // lblDot9
             // 
@@ -451,6 +466,8 @@
             lblLine15.Name = "lblLine15";
             lblLine15.Size = new Size(116, 8);
             lblLine15.TabIndex = 22;
+            lblLine15.Tag = "row";
+            lblLine15.Click += row7_Click;
             // 
             // lblDot10
             // 
@@ -472,6 +489,8 @@
             lblLine16.Name = "lblLine16";
             lblLine16.Size = new Size(116, 8);
             lblLine16.TabIndex = 24;
+            lblLine16.Tag = "row";
+            lblLine16.Click += row8_Click;
             // 
             // lblDot11
             // 
@@ -493,6 +512,7 @@
             lblLine17.Name = "lblLine17";
             lblLine17.Size = new Size(116, 8);
             lblLine17.TabIndex = 26;
+            lblLine17.Tag = "row";
             // 
             // lblDot12
             // 
@@ -513,6 +533,7 @@
             lblLine18.Name = "lblLine18";
             lblLine18.Size = new Size(8, 116);
             lblLine18.TabIndex = 28;
+            lblLine18.Tag = "column";
             // 
             // lblLine19
             // 
@@ -522,6 +543,7 @@
             lblLine19.Name = "lblLine19";
             lblLine19.Size = new Size(8, 116);
             lblLine19.TabIndex = 29;
+            lblLine19.Tag = "column";
             // 
             // lblLine20
             // 
@@ -531,6 +553,7 @@
             lblLine20.Name = "lblLine20";
             lblLine20.Size = new Size(8, 116);
             lblLine20.TabIndex = 30;
+            lblLine20.Tag = "column";
             // 
             // lblLine21
             // 
@@ -540,6 +563,7 @@
             lblLine21.Name = "lblLine21";
             lblLine21.Size = new Size(8, 116);
             lblLine21.TabIndex = 31;
+            lblLine21.Tag = "column";
             // 
             // lblDot13
             // 
@@ -561,6 +585,8 @@
             lblLine22.Name = "lblLine22";
             lblLine22.Size = new Size(116, 8);
             lblLine22.TabIndex = 33;
+            lblLine22.Tag = "row";
+            lblLine22.Click += row10_Click;
             // 
             // lblDot14
             // 
@@ -582,6 +608,7 @@
             lblLine23.Name = "lblLine23";
             lblLine23.Size = new Size(116, 8);
             lblLine23.TabIndex = 35;
+            lblLine23.Tag = "row";
             // 
             // lblDot15
             // 
@@ -603,6 +630,7 @@
             lblLine24.Name = "lblLine24";
             lblLine24.Size = new Size(116, 8);
             lblLine24.TabIndex = 37;
+            lblLine24.Tag = "row";
             // 
             // lblDot16
             // 
@@ -624,11 +652,13 @@
             lblLine10.Name = "lblLine10";
             lblLine10.Size = new Size(116, 8);
             lblLine10.TabIndex = 16;
+            lblLine10.Tag = "row";
             // 
             // lblBoxFill1
             // 
             lblBoxFill1.AutoSize = true;
             lblBoxFill1.Dock = DockStyle.Fill;
+            lblBoxFill1.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill1.Location = new Point(149, 146);
             lblBoxFill1.Name = "lblBoxFill1";
             lblBoxFill1.Size = new Size(110, 116);
@@ -639,6 +669,7 @@
             // 
             lblBoxFill2.AutoSize = true;
             lblBoxFill2.Dock = DockStyle.Fill;
+            lblBoxFill2.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill2.Location = new Point(295, 146);
             lblBoxFill2.Name = "lblBoxFill2";
             lblBoxFill2.Size = new Size(110, 116);
@@ -649,6 +680,7 @@
             // 
             lblBoxFill3.AutoSize = true;
             lblBoxFill3.Dock = DockStyle.Fill;
+            lblBoxFill3.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill3.Location = new Point(441, 146);
             lblBoxFill3.Name = "lblBoxFill3";
             lblBoxFill3.Size = new Size(110, 116);
@@ -659,6 +691,7 @@
             // 
             lblBoxFill4.AutoSize = true;
             lblBoxFill4.Dock = DockStyle.Fill;
+            lblBoxFill4.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill4.Location = new Point(149, 292);
             lblBoxFill4.Name = "lblBoxFill4";
             lblBoxFill4.Size = new Size(110, 116);
@@ -669,6 +702,7 @@
             // 
             lblBoxFill5.AutoSize = true;
             lblBoxFill5.Dock = DockStyle.Fill;
+            lblBoxFill5.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill5.Location = new Point(295, 292);
             lblBoxFill5.Name = "lblBoxFill5";
             lblBoxFill5.Size = new Size(110, 116);
@@ -679,6 +713,7 @@
             // 
             lblBoxFill6.AutoSize = true;
             lblBoxFill6.Dock = DockStyle.Fill;
+            lblBoxFill6.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill6.Location = new Point(441, 292);
             lblBoxFill6.Name = "lblBoxFill6";
             lblBoxFill6.Size = new Size(110, 116);
@@ -689,6 +724,7 @@
             // 
             lblBoxFill7.AutoSize = true;
             lblBoxFill7.Dock = DockStyle.Fill;
+            lblBoxFill7.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill7.Location = new Point(149, 438);
             lblBoxFill7.Name = "lblBoxFill7";
             lblBoxFill7.Size = new Size(110, 116);
@@ -699,6 +735,7 @@
             // 
             lblBoxFill8.AutoSize = true;
             lblBoxFill8.Dock = DockStyle.Fill;
+            lblBoxFill8.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill8.Location = new Point(295, 438);
             lblBoxFill8.Name = "lblBoxFill8";
             lblBoxFill8.Size = new Size(110, 116);
@@ -709,6 +746,7 @@
             // 
             lblBoxFill9.AutoSize = true;
             lblBoxFill9.Dock = DockStyle.Fill;
+            lblBoxFill9.Font = new Font("Ravie", 45F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblBoxFill9.Location = new Point(441, 438);
             lblBoxFill9.Name = "lblBoxFill9";
             lblBoxFill9.Size = new Size(110, 116);
