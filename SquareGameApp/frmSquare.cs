@@ -15,8 +15,7 @@ namespace SquareGameApp
         List<Label> lstlines;
         List<Label> lstboxfill;
         List<List<Label>> lstcompleteboxes;
-        List<List<Label>> lstTemp;
-
+        
         int scorex = 0;
         int scoreo = 0;
 
@@ -47,7 +46,7 @@ namespace SquareGameApp
         
         private void StartGame()
         {
-            ResetListsAndScore();
+            ResetScore();
             lstboxfill.ForEach(lbl => lbl.Text = "");
             gamestatus = GameStatusEnum.Playing;
             currentturn = TurnEnum.X;
@@ -228,26 +227,6 @@ namespace SquareGameApp
                 FullBoxIf(8, lblBoxFill9);
             }
 
-            //if (isFound == true)
-            //{
-            //    int listnum = lstTemp.FindIndex(fb => lst.Count(lbl => lbl.BackColor == Color.Black) == 4);
-            //    string boxclaim = currentturn.ToString();
-            //    lstboxfill[listnum].Text = boxclaim;
-            //    lstboxfill.RemoveAt(listnum);
-            //    lstcompleteboxes.RemoveAt(listnum);
-            //    if (currentturn == TurnEnum.X)
-            //    {
-            //        scorex = scorex + 1;
-            //    }
-            //    else
-            //    {
-            //        scoreo = scoreo + 1;
-            //    }
-            //}
-            //else
-            //{
-            //    lblStatus.Text = "This is not working";
-            //}
         }
         private void DisplayGameStatus()
         {
@@ -271,21 +250,8 @@ namespace SquareGameApp
             lblStatus.Text = msg;
         }
 
-        private void ResetListsAndScore()
+        private void ResetScore()
         {
-            lstboxfill = new() { lblBoxFill1, lblBoxFill2, lblBoxFill3, lblBoxFill4, lblBoxFill5, lblBoxFill6, lblBoxFill7, lblBoxFill8, lblBoxFill9 };
-            lstTemp = new()
-            {
-                new(){lblLine1, lblLine4, lblLine5, lblLine8 },
-                new(){lblLine2, lblLine5, lblLine6, lblLine9 },
-                new(){lblLine3, lblLine6, lblLine7, lblLine10 },
-                new(){lblLine8, lblLine11, lblLine12, lblLine15 },
-                new(){lblLine9, lblLine12, lblLine13, lblLine16 },
-                new(){lblLine10, lblLine13, lblLine14, lblLine17 },
-                new(){lblLine15, lblLine18, lblLine19, lblLine22 },
-                new(){lblLine16, lblLine19, lblLine20, lblLine23 },
-                new(){lblLine17, lblLine20, lblLine21, lblLine24 }
-            };
             scorex = 0;
             scoreo = 0;
 
