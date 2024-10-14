@@ -9,7 +9,7 @@ namespace SquareGameApp
         enum TurnEnum { X, O };
         TurnEnum currentturn = TurnEnum.X;
 
-        enum GameStatusEnum { NotStarted, Playing, Winner, Tie }
+        enum GameStatusEnum { NotStarted, Playing, Winner }
         GameStatusEnum gamestatus = GameStatusEnum.NotStarted;
 
         List<Label> lstlines;
@@ -23,11 +23,7 @@ namespace SquareGameApp
         {
             InitializeComponent();
             lstlines = new() { lblLine1, lblLine2, lblLine3, lblLine4, lblLine5, lblLine6, lblLine7, lblLine8, lblLine9, lblLine10, lblLine11, lblLine12, lblLine13, lblLine14, lblLine15, lblLine16, lblLine17, lblLine18, lblLine19, lblLine20, lblLine21, lblLine22, lblLine23, lblLine24 };
-
-            lstlines.ForEach(lbl => lbl.Click += LineClick_Click);
             lstboxfill = new() { lblBoxFill1, lblBoxFill2, lblBoxFill3, lblBoxFill4, lblBoxFill5, lblBoxFill6, lblBoxFill7, lblBoxFill8, lblBoxFill9 };
-            btnStart.Click += BtnStart_Click;
-
             lstcompleteboxes = new()
             {
                 new(){lblLine1, lblLine4, lblLine5, lblLine8 },
@@ -40,6 +36,10 @@ namespace SquareGameApp
                 new(){lblLine16, lblLine19, lblLine20, lblLine23 },
                 new(){lblLine17, lblLine20, lblLine21, lblLine24 }
             };
+
+            lstlines.ForEach(lbl => lbl.Click += LineClick_Click);
+            btnStart.Click += BtnStart_Click;
+                        
             DisplayGameStatus();
 
         }
@@ -96,7 +96,7 @@ namespace SquareGameApp
             }
         }
 
-        private void FullBoxIf(int lstcompleteboxindex, Label boxfilllabel)
+        private void DetectSpecificCompleteBox(int lstcompleteboxindex, Label boxfilllabel)
         {
             if (lstcompleteboxes[lstcompleteboxindex].Count(lbl => lbl.BackColor == Color.Black) == 4)
             {
@@ -105,126 +105,116 @@ namespace SquareGameApp
             }
         }
 
-        private void FullBoxElseIf(int lstcompleteboxindex1, Label boxfilllabel1, int lstcompleteboxindex2, Label boxfilllabel2)
-        {
-            if (lstcompleteboxes[lstcompleteboxindex1].Count(lbl => lbl.BackColor == Color.Black) == 4)
-            {
-                if (lstcompleteboxes[lstcompleteboxindex2].Count(lbl => lbl.BackColor == Color.Black) == 4)
-                {
-                    boxfilllabel1.Text = currentturn.ToString();
-                    UpdateScore();
-                    boxfilllabel2.Text = currentturn.ToString();
-                    UpdateScore();
-                }
-                else
-                {
-                    boxfilllabel1.Text = currentturn.ToString();
-                    UpdateScore();
-                }
-            }
-            else if (lstcompleteboxes[lstcompleteboxindex2].Count(lbl => lbl.BackColor == Color.Black) == 4)
-            {
-                boxfilllabel2.Text = currentturn.ToString();
-                UpdateScore();
-            }
-        }
+        
         private void DetectCompleteBox(Label clickedlabel)
         {
             if (clickedlabel == lblLine1)
             {
-                FullBoxIf(0, lblBoxFill1);
+                DetectSpecificCompleteBox(0, lblBoxFill1);
             }
             else if (clickedlabel == lblLine2)
             {
-                FullBoxIf(1, lblBoxFill2);
+                DetectSpecificCompleteBox(1, lblBoxFill2);
             }
             else if (clickedlabel == lblLine3)
             {
-                FullBoxIf(2, lblBoxFill3);
+                DetectSpecificCompleteBox(2, lblBoxFill3);
             }
             else if (clickedlabel == lblLine4)
             {
-                FullBoxIf(0, lblBoxFill1);
+                DetectSpecificCompleteBox(0, lblBoxFill1);
             }
             else if (clickedlabel == lblLine5)
             {
-                FullBoxElseIf(0, lblBoxFill1, 1, lblBoxFill2);
+                DetectSpecificCompleteBox(0, lblBoxFill1);
+                DetectSpecificCompleteBox(1, lblBoxFill2);
             }
             else if (clickedlabel == lblLine6)
             {
-                FullBoxElseIf(1, lblBoxFill2, 2, lblBoxFill3);
+                DetectSpecificCompleteBox(1, lblBoxFill2);
+                DetectSpecificCompleteBox(2, lblBoxFill3); 
             }
             else if (clickedlabel == lblLine7)
             {
-                FullBoxIf(2, lblBoxFill3);
+                DetectSpecificCompleteBox(2, lblBoxFill3);
             }
             else if (clickedlabel == lblLine8)
             {
-                FullBoxElseIf(0, lblBoxFill1, 3, lblBoxFill4);
+                DetectSpecificCompleteBox(0, lblBoxFill1);
+                DetectSpecificCompleteBox(3, lblBoxFill4);
             }
             else if (clickedlabel == lblLine9)
             {
-                FullBoxElseIf(1, lblBoxFill2, 4, lblBoxFill5);
+                DetectSpecificCompleteBox(1, lblBoxFill2);
+                DetectSpecificCompleteBox(4, lblBoxFill5); 
             }
             else if (clickedlabel == lblLine10)
             {
-                FullBoxElseIf(2, lblBoxFill3, 5, lblBoxFill6);
+                DetectSpecificCompleteBox(2, lblBoxFill3);
+                DetectSpecificCompleteBox(5, lblBoxFill6);
             }
             else if (clickedlabel == lblLine11)
             {
-                FullBoxIf(3, lblBoxFill4);
+                DetectSpecificCompleteBox(3, lblBoxFill4);
             }
             else if (clickedlabel == lblLine12)
             {
-                FullBoxElseIf(3, lblBoxFill4, 4, lblBoxFill5);
+                DetectSpecificCompleteBox(3, lblBoxFill4);
+                DetectSpecificCompleteBox(4, lblBoxFill5);
             }
             else if (clickedlabel == lblLine13)
             {
-                FullBoxElseIf(4, lblBoxFill5, 5, lblBoxFill6);
+                DetectSpecificCompleteBox(4, lblBoxFill5);
+                DetectSpecificCompleteBox(5, lblBoxFill6);
             }
             else if (clickedlabel == lblLine14)
             {
-                FullBoxIf(5, lblBoxFill6);
+                DetectSpecificCompleteBox(5, lblBoxFill6);
             }
             else if (clickedlabel == lblLine15)
             {
-                FullBoxElseIf(3, lblBoxFill4, 6, lblBoxFill7);
+                DetectSpecificCompleteBox(3, lblBoxFill4);
+                DetectSpecificCompleteBox(6, lblBoxFill7);
             }
             else if (clickedlabel == lblLine16)
             {
-                FullBoxElseIf(4, lblBoxFill5, 7, lblBoxFill8);
+                DetectSpecificCompleteBox(4, lblBoxFill5);
+                DetectSpecificCompleteBox(7, lblBoxFill8);
             }
             else if (clickedlabel == lblLine17)
             {
-                FullBoxElseIf(5, lblBoxFill6, 8, lblBoxFill9);
+                DetectSpecificCompleteBox(5, lblBoxFill6);
+                DetectSpecificCompleteBox(8, lblBoxFill9);
             }
             else if (clickedlabel == lblLine18)
             {
-                FullBoxIf(6, lblBoxFill7);
+                DetectSpecificCompleteBox(6, lblBoxFill7);
             }
             else if (clickedlabel == lblLine19)
             {
-                FullBoxElseIf(6, lblBoxFill7, 7, lblBoxFill8);
+                DetectSpecificCompleteBox(6, lblBoxFill7);
+                DetectSpecificCompleteBox(7, lblBoxFill8);
             }
             else if (clickedlabel == lblLine20)
             {
-                FullBoxElseIf(7, lblBoxFill8, 8, lblBoxFill9);
+                DetectSpecificCompleteBox(7, lblBoxFill8);
+                DetectSpecificCompleteBox(8, lblBoxFill9);
             }
             else if (clickedlabel == lblLine21)
             {
-                FullBoxIf(8, lblBoxFill9);
+                DetectSpecificCompleteBox(8, lblBoxFill9);
             }
             else if (clickedlabel == lblLine22)
             {
-                FullBoxIf(6, lblBoxFill7);
+                DetectSpecificCompleteBox(6, lblBoxFill7);
             }
             else if (clickedlabel == lblLine23)
             {
-                FullBoxIf(7, lblBoxFill8);
+                DetectSpecificCompleteBox(7, lblBoxFill8);
             }
             else if (clickedlabel == lblLine24)
             {
-                FullBoxIf(8, lblBoxFill9);
+                DetectSpecificCompleteBox(8, lblBoxFill9);
             }
 
         }
@@ -236,9 +226,6 @@ namespace SquareGameApp
             {
                 case GameStatusEnum.Playing:
                     msg = "Current turn: " + currentturn.ToString();
-                    break;
-                case GameStatusEnum.Tie:
-                    msg = "Box Complete!";
                     break;
                 case GameStatusEnum.Winner:
                     msg = "Winner is: " + (scorex > scoreo ? "X" : "O");
