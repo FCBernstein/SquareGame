@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="SquareGameMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:SquareGameMAUI"
+    Title="SquareGameMAUI">
+
+    <ShellContent
+        Title="Square Game"
+        ContentTemplate="{DataTemplate local:SquareGame}"
+        Route="SquareGame" />
+
+</Shell>
